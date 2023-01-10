@@ -1,6 +1,5 @@
+Flask
 twilio
 pymongo
 dnspython
 gunicorn
-dash==2.6.0
-pandas
