@@ -19,7 +19,7 @@ def reply():
     response = MessagingResponse()
     user = users.find_one({"number": number})
 
-    if not  bool(user) == False:
+    if not bool(user) == False:
         response.message(
             "Hi, thanks for contacting *The Red Velvet* \n You can choose from one of th options below: "
             "\n\n*Type*\n\n1️⃣ TO *Contact* us \n2️⃣ To *order* snacks \n3️⃣To know oue *working hours* \n4️⃣ To get "
