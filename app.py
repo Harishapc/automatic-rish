@@ -13,13 +13,13 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def reply():
-    text = request.form.get("message")
-    number = request.form.get("sender")
+    text = request.form.get("Body")
+    number = request.form.get("From")
     number = number.replace("whatsapp:", "")
     response = MessagingResponse()
     user = users.find_one({"number": number})
 
-    if not False == bool(user)  :
+    if not bool(user) ==  False  :
         response.message(
             "Hi, thanks for contacting *The Red Velvet* \n You can choose from one of th options below: "
             "\n\n*Type*\n\n1️⃣ TO *Contact* us \n2️⃣ To *order* snacks \n3️⃣To know oue *working hours* \n4️⃣ To get "
