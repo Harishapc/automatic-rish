@@ -15,6 +15,7 @@ app = Flask(__name__)
 def reply():
     text = request.form.get("message")
     number = request.form.get("sender")
+    number = number.replace("whatsapp:", "")
     response = MessagingResponse()
     user = users.find_one({"number": number})
 
