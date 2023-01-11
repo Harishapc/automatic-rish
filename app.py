@@ -13,8 +13,8 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def reply():
-    text = request.form.get("Body")
-    number = request.form.get("From")
+    text = request.form.get("message")
+    number = request.form.get("sender")
     response = MessagingResponse()
     user = users.find_one({"number": number})
 
